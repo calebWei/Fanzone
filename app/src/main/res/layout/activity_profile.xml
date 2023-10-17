@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:gravity="center"
+        android:background="#36343B"
+        android:id="@+id/accountTitle"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:paddingTop="16dp"
+            android:text="@string/account"
+            android:fontFamily="@font/nats"
+            android:textAlignment="center"
+            android:textSize="45sp"
+            android:textColor="@color/white"
+            android:background="#36343B"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </TextView>
+
+    </LinearLayout>
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#49454F"
+        android:layout_below="@id/accountTitle"
+        android:layout_above="@id/middleSection"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <ScrollView
+        android:id="@+id/middleSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/accountTitle"
+        android:background="#312F34"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <!-- Account Details -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account Details"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:fontFamily="@font/nats"/>
+
+            <!-- Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/nats" />
+
+                <EditText
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/baseline_edit_24"
+                    android:drawableTint="#A5ACB8"
+                    android:gravity="right"
+                    android:hint="Bob"
+                    android:textColorHint="#A5ACB8"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/nats"
+                    android:drawablePadding="10dp"
+                    android:backgroundTint="#312F34"/>
+
+            </LinearLayout>
+
+            <!-- Email Address -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/nats" />
+
+                <EditText
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="example@gmail.com"
+                    android:gravity="right"
+                    android:textColorHint="#A5ACB8"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/nats"
+                    android:drawableRight="@drawable/baseline_edit_24"
+                    android:drawableTint="#A5ACB8"
+                    android:drawablePadding="10dp"
+                    android:backgroundTint="#312F34"/>
+
+            </LinearLayout>
+
+            <!-- Password -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/nats" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="********"
+                    android:inputType="textPassword"
+                    android:gravity="right"
+                    android:textColorHint="#A5ACB8"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/nats"
+                    android:drawableRight="@drawable/baseline_edit_24"
+                    android:drawableTint="#A5ACB8"
+                    android:drawablePadding="10dp"
+                    android:backgroundTint="#312F34"/>
+
+            </LinearLayout>
+
+            <!-- Horizontal Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#49454F"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Past Orders -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Past Orders"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:fontFamily="@font/nats" />
+
+            <!-- Horizontal Scrollable View of Images -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Images here -->
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Horizontal Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#49454F"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/LogOutButton"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/nats"
+                android:text="Log Out"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

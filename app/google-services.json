@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "756925124210",
+    "project_id": "softeng306-project-1-fanzone",
+    "storage_bucket": "softeng306-project-1-fanzone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756925124210:android:8ff829ef9ca6518b1d7ceb",
+        "android_client_info": {
+          "package_name": "com.example.fanzone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756925124210-5vb9ohv5ttai8elehb9aqf3clhlqtah5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB75I5J4O-Tp72QEY-1yUGCJMWfb92MOrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756925124210-5vb9ohv5ttai8elehb9aqf3clhlqtah5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

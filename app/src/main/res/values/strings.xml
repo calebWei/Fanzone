@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FANZONE</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="forgotPass"><u>Forgot Your Password?</u>.</string>
+    <string name="privacyAgreement">I agree to the <u>Terms of Use</u> and <u>Privacy Policy</u></string>
+    <string name="loginText">Already have an account? <u>Log in</u></string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_home">Home</string>
+    <string name="account"><u>Account</u></string>
+    <string name="sign_up">Sign Up</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="get_it_now"><u>Get It Now</u></string>
+    <string name="description"><u>Description</u></string>
+    <string name="details"><u>Details</u></string>
+    <string name="your_cart"><u>Your Cart</u></string>
+    <string name="checkout"><u>Checkout</u></string>
+    <string name="cart"><u>Cart</u></string>
+
+</resources>

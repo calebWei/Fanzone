@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/shirt_images_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginVertical="16dp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            style="@style/Widget.Material3.TabLayout.OnSurface"
+            android:id="@+id/shirt_images_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#36343B"
+            android:contentDescription="hi"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+
+        <!-- Horizontal Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#49454F" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#312F34"
+            android:padding="16dp"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shirt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="34sp"
+                    android:textColor="@color/white"
+                    android:text="Name"
+                    android:lineSpacingMultiplier="0.5"
+                    android:fontFamily="@font/nats"
+                    android:includeFontPadding="false"
+                    />
+
+                <TextView
+                    android:id="@+id/shirt_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:text="Price"
+                    android:fontFamily="@font/nats"
+                    android:includeFontPadding="false"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:text="@string/description"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nats"/>
+
+                <TextView
+                    android:id="@+id/shirt_description_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:text="Description Content"
+                    android:fontFamily="@font/nats"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:text="@string/details"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nats"/>
+
+                <TextView
+                    android:id="@+id/shirt_details_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:text="Description Content"
+                    android:fontFamily="@font/nats" />
+
+                <!-- Horizontal Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#49454F"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:text="@string/get_it_now"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nats"/>
+
+                <TextView
+                    android:id="@+id/units_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="15 units left"
+                    android:textColor="#A5ACB8"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nats"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Qty"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/nats"
+                        android:paddingRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/minus_button"
+                            style="?attr/materialButtonOutlinedStyle"
+                            app:strokeColor="#FFFFFF"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            app:iconPadding="0dp"
+                            android:hint="placeholder"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            app:icon="@drawable/baseline_remove_24"
+                            app:iconTint="@color/white"
+                            app:iconGravity="textStart"
+                            app:cornerRadius="10dp"
+                            android:layout_gravity="center"
+                            app:shapeAppearance="@style/RoundedShapeAppearance" />
+
+                        <TextView
+                            android:id="@+id/quantity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/nats"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/plus_button"
+                            style="?attr/materialButtonOutlinedStyle"
+                            app:strokeColor="#FFFFFF"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            app:iconPadding="0dp"
+                            android:hint="placeholder"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            app:icon="@drawable/baseline_add_24"
+                            app:iconGravity="textStart"
+                            android:layout_gravity="center"
+                            app:iconTint="@color/white"
+                            app:cornerRadius="10dp"
+                            app:shapeAppearance="@style/RoundedShapeAppearance" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Size"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/nats"
+                        android:paddingHorizontal="10dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/size_small"
+                            style="@style/RadioButton.Login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="S" />
+
+                        <RadioButton
+                            android:id="@+id/size_medium"
+                            style="@style/RadioButton.Login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@android:color/white"
+                            android:text="M"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/size_large"
+                            style="@style/RadioButton.Login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@android:color/white"
+                            android:text="L" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/cartButton"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Add To Cart"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:icon="@drawable/baseline_add_shopping_cart_24"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/black"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="40dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

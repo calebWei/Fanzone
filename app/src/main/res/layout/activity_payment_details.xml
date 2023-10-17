@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShippingAddressActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:gravity="center"
+        android:background="#36343B"
+        android:id="@+id/checkoutTitle"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:paddingTop="16dp"
+            android:paddingHorizontal="16dp"
+            android:text="@string/checkout"
+            android:fontFamily="@font/nats"
+            android:textAlignment="center"
+            android:textSize="45sp"
+            android:textColor="@color/white"
+            android:background="#36343B"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </TextView>
+
+    </LinearLayout>
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#49454F"
+        android:layout_below="@id/checkoutTitle"
+        android:layout_above="@id/middleSection"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <ScrollView
+        android:id="@+id/middleSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/checkoutTitle"
+        android:background="#312F34"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#312F34">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Details"
+                android:textColor="@color/white"
+                android:layout_gravity="left"
+                android:textSize="24sp"
+                android:fontFamily="@font/nats"
+                android:layout_marginLeft="16dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Card number"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="#FFFFFF"
+                app:placeholderTextColor="#A5ACB8"
+                app:expandedHintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="25"
+                    android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Expiry"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="#FFFFFF"
+                    app:placeholderTextColor="#A5ACB8"
+                    app:expandedHintEnabled="false"
+                    android:layout_weight="1">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="25"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CVC"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="#FFFFFF"
+                    app:placeholderTextColor="#A5ACB8"
+                    app:expandedHintEnabled="false"
+                    android:layout_weight="1">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address_line_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="25"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Horizontal Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#49454F"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="-8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Fee (incl. GST)"
+                    android:fontFamily="@font/nats"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/shipping_cost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Price"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nats"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="end"
+                    android:gravity="end">
+                </TextView>
+                <!--                android:gravity="center_vertical|end"-->
+                <!--                android:layout_gravity="end"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total (incl. GST)"
+                    android:fontFamily="@font/nats"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="26sp"/>
+
+                <TextView
+                    android:id="@+id/total_cost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Price"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nats"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="26sp"
+                    android:layout_gravity="end"
+                    android:gravity="end">
+                </TextView>
+                <!--                android:gravity="center_vertical|end"-->
+                <!--                android:layout_gravity="end"/>-->
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkbox_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="I agree to the Terms of Use and Privacy Policy"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nats"
+                android:layout_marginLeft="48dp"
+                app:buttonTint="@color/white"
+                 />
+
+            <Button
+                android:id="@+id/orderButton"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="Place Order"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nats"
+                android:textSize="18sp"
+                app:icon="@drawable/baseline_double_arrow_24"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/black"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
